@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Speed Reader</string>
+    <string name="templateButton1">Template 1</string>
+    <string name="templateButton2">Template 2</string>
+    <string name="customText">Custom Text</string>
+    <string name="introuctionText">This is a demo Speed Reader app. Start it by choosing one of the two existing text templates or write a custom one.</string>
+    <string name="confirmation">Confirm</string>
+    <string name="blankTextWarning">The custom text cannot be blank</string>
+    <string name="templateText1">I’m telling you mate, it was me. See it fits. I told you it would. That’s ‘cos I was the bird dancing with the Prince all last night. I know I shouldn’t have left like I did, running off at the stroke of midnight, but I had to. I’d left the kids with a neighbour and she’d said she could only mind them until her old man got home at 12. I didn’t want to leave them on their own for too long, not with them being so tiny. Well you don’t do you? Bleeding shoe fell off as I was running down the stairs. Then I couldn’t get a taxi and had to walk home in that rain. Soaked I was. Any way it’ll be OK now, what with the Prince having found the true love of his life. What did you say his name was again?</string>
+    <string name="templateText2">I’ll just sit here a moment, get my breath back. It’s that bitch from number 43, won’t leave me alone. Every time I leave the house she’s there, by my side, those big doleful eyes staring up at me. Gives me the shivers it does. Don’t get me wrong, she’s a real looker and I’d be lying if I didn’t say I’ve been tempted. But she wants more than I’m prepared to give her. I know what would happen. It would start off as a simple walk together, then one sniff would lead to another and that would be that – my bachelor life would be over. Before long the place would be full of puppies and I’d never get out to the pub or a footy match with the lads. Best I keep out of temptations way. Oh no, it’s her! She’s seen me. Time I was off.</string>
+</resources>
+
+<!-- Template stories source: https://mjshorts.wordpress.com/tag/150-words/ -->
