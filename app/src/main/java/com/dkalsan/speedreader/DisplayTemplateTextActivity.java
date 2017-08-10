@@ -70,10 +70,9 @@ public class DisplayTemplateTextActivity extends AppCompatActivity {
         customView.animate().alpha(0f).setDuration(1700);
 
         Handler handler = new Handler();
-        final Intent intent = new Intent(this, MainActivity.class);
         handler.postDelayed(new Runnable() {
             public void run() {
-                startActivity(intent);
+                finish();
             }
         }, 1700);
     }

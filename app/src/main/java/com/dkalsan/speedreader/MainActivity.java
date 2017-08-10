@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendCustomTemplate(View view) {
-        Button customTemplateButton = (Button) findViewById(R.id.customTemplateButton);
+        final Button customTemplateButton = (Button) findViewById(R.id.customTemplateButton);
         final EditText customEditText = (EditText) findViewById(R.id.customEditText);
 
         customTemplateButton.setText(R.string.confirmation);
@@ -37,19 +37,30 @@ public class MainActivity extends AppCompatActivity {
         customTemplateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendTemplate(customEditText.getText().toString());
+                String text = customEditText.getText().toString();
+
+                if(text.isEmpty()) {
+                    Toast.makeText(MainActivity.this, R.string.blankTextWarning, Toast.LENGTH_LONG).show();
+                } else {
+                    sendTemplate(text);
+                    customEditText.setText("");
+                    customTemplateButton.animate().translationYBy(customTemplateButton.getHeight() * -1);
+                    customTemplateButton.setText(R.string.customText);
+                    customTemplateButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            sendCustomTemplate(v);
+                        }
+                    });
+                }
             }
         });
     }
 
     public void sendTemplate(String text) {
-        if(text.isEmpty()) {
-            Toast.makeText(this, R.string.blankTextWarning, Toast.LENGTH_LONG).show();
-        } else {
             Intent intent = new Intent(this, DisplayTemplateTextActivity.class);
             intent.putExtra(TEMPLATE_TEXT, text);
             startActivity(intent);
-        }
     }
 
     @Override
